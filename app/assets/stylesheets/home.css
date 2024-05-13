@@ -1,0 +1,58 @@
+/* Підключення Google Fonts для красивого шрифту */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif; /* Оновлення шрифту на Roboto для кращого вигляду */
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; /* Білий фон для основи */
+    color: #333; /* Темно-сірий для основного тексту */
+}
+
+.header {
+    background-color: #0077cc; /* Красивий синій колір для заголовка */
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px; /* Збільшення розміру шрифту для заголовка */
+    font-weight: 700; /* Жирний шрифт для заголовка */
+}
+
+.nav {
+    display: flex;
+    justify-content: center; /* Центрує елементи по горизонталі */
+    align-items: center; /* Центрує елементи по вертикалі */
+    padding: 10px 0;
+    background-color: #0055cc;
+}
+
+.nav a {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold; /* Жирний шрифт для навігації */
+}
+
+.nav a:hover {
+    background-color: #003388; /* Темніший синій колір для ефекту наведення */
+}
+
+.main {
+    padding: 20px;
+    margin-top: 10px;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Тінь для виділення основного вмісту */
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+

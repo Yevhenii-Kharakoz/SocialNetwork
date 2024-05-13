@@ -1,0 +1,35 @@
+/* Стилі для обгортки переключення мов */
+.language-switcher-wrapper {
+    position: fixed; /* Фіксує позицію елемента на сторінці */
+    bottom: 0;       /* Вирівнювання унизу сторінки */
+    width: 100%;     /* Повна ширина елемента */
+    background-color: #f8f9fa; /* Світлий фон для кращої видимості */
+    border-top: 1px solid #ccc; /* Додаємо верхню межу для візуального розділення */
+}
+
+.language-switcher {
+    text-align: center; /* Центрування посилань усередині */
+    padding: 10px 0;    /* Додатковий відступ для кращої візуальної привабливості */
+}
+
+.language-switcher ul {
+    list-style: none; /* Видалення стилів списку */
+    padding: 0;
+    margin: 0;
+    display: inline-block; /* Для центрування списку в навігації */
+}
+
+.language-switcher li {
+    display: inline; /* Показати елементи списку в одному рядку */
+    margin: 0 10px;
+}
+
+.language-switcher a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.language-switcher a:hover, .language-switcher a.active {
+    color: #D32F2F;
+}

@@ -1,0 +1,25 @@
+/* Error messages styling */
+.error-messages {
+    padding: 10px 20px;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+}
+
+.error-messages h2 {
+    margin-top: 0;
+    color: #721c24;
+}
+
+.error-messages ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.error-messages li {
+    margin-bottom: 5px;
+}
