@@ -1,0 +1,61 @@
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* создает две колонки */
+    gap: 20px; /* Уменьшенный зазор для более компактного вида */
+    padding: 50px; /* Уменьшенный отступ для экономии пространства */
+}
+
+.post-preview {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    word-wrap: break-word;
+    white-space: normal;
+    overflow: hidden; /* Или 'auto' если нужен скролл при переполнении */
+}
+
+.post-preview h2 {
+    font-size: 20px;
+    margin-bottom: 10px; /* Уменьшенный отступ после заголовка */
+}
+
+.post-preview p {
+    font-size: 16px;
+    color: #666;
+    margin-top: 5px; /* Добавлен отступ сверху для текста */
+}
+
+.post-meta {
+    font-size: 14px; /* Меньший размер шрифта для метаданных */
+    color: #888; /* Серый цвет для даты и автора */
+    margin-bottom: 10px; /* Отступ после метаданных */
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 8px 12px;
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin-top: 10px; /* Уменьшенный отступ сверху для кнопки */
+    text-decoration: none;
+}
+.post-body {
+    overflow-wrap: break-word; /* современный аналог word-wrap */
+    white-space: pre-wrap; /* сохраняет пробелы и переносы, делает переносы по словам */
+    max-width: 50%; /* ограничивает ширину, чтобы текст не выходил за пределы контейнера */
+}
+.post-image {
+    width: 100%;
+    max-width: 600px; /* Настройте по вашему дизайну */
+    height: auto;
+}
+.img-thumbnail {
+    width: 300px;
+    height: 300px;
+    object-fit: cover; /* Это свойство сохранит пропорции изображения */
+}
