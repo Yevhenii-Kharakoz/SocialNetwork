@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ваша Соціальна Мережа</title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+</head>
+<body>
+<div class="header">
+  <h1>Ласкаво просимо до Вашої Соціальної Мережі!</h1>
+</div>
+<nav class="nav">
+  <% if user_signed_in? %>
+    <%= link_to 'View All Posts', posts_path, class: "view-posts-link" %>
+   <a href="<%= edit_user_registration_path %>"><%= I18n.t('Home.change_pass') %></a>
+    <%= link_to I18n.t('Home.sign_out'), destroy_user_session_path, method: :delete %>
+  <% else %>
+    <a href="<%= new_user_session_path %>"><%= I18n.t('links.login') %></a>
+    <a href="<%= new_user_registration_path %>"><%= I18n.t('registration.register') %></a>
+  <% end %>
+</nav>
+<div class="main">
+  <p>Ця сторінка є домашньою сторінкою вашої соціальної мережі, де користувачі можуть взаємодіяти один з одним.</p>
+</div>
+<div class="footer">
+  <p>© 2024 Ваша Соціальна Мережа. Усі права захищені.</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!-- app/views/devise/registrations/new.html.erb -->
+<div class="container-auth">
+  <div class="auth-card">
+    <h2 class="auth-header"><%= I18n.t('registration.register') %></h2>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <div class="form-group">
+        <%= f.label :email, I18n.t('registration.email'), class: "form-label" %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control-auth" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :password, I18n.t('registration.password'), class: "form-label" %>
+        <%= f.password_field :password, autocomplete: "new-password", class: "form-control-auth" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :password_confirmation, I18n.t('registration.password confirmation'), class: "form-label" %>
+        <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control-auth" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :city, I18n.t('registration.city'), class: "form-label" %>
+        <%= f.text_field :city, autocomplete: "city", class: "form-control-auth" %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit I18n.t('registration.register'), class: "auth-button" %>
+      </div>
+    <% end %>
+
+    <%= render "devise/shared/links", class: "auth-links" %>
+  </div>
+</div>

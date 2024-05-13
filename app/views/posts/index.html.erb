@@ -1,0 +1,20 @@
+<%= link_to 'New Post', new_post_path, class: 'btn btn-primary' %>
+<div class="posts-grid">
+  <% @posts.each do |post| %>
+    <div class="post-preview">
+      <div class="post-content">
+        <h2><%= link_to post.title, post_path(post), target: "_blank" %></h2>
+        <div class="post-meta">
+          Published on: <%= post.created_at.strftime("%B %d, %Y") %><br>
+          Author: <%= post.user ? post.user.email : "Unknown" %>
+        </div>
+        <p><%= truncate(post.body, length: 100) %></p>
+      </div>
+
+      <% if post.image.attached? %>
+        <%= image_tag post.image, class: "img-thumbnail" %>
+      <% end %>
+      <%= link_to 'Продолжить прочтение', post_path(post), class: "btn btn-primary", target: "_blank" %>
+    </div>
+  <% end %>
+</div>

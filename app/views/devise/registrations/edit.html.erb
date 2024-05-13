@@ -1,0 +1,38 @@
+<!-- app/views/devise/registrations/edit.html.erb -->
+<div class="container-auth">
+  <div class="auth-card">
+    <h2 class="auth-header">Редагувати профіль</h2>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+      <div class="form-group">
+        <%= f.label :email, "Електронна адреса", class: "form-label" %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control-auth" %>
+      </div>
+
+      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+        <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+      <% end %>
+
+      <div class="form-group">
+        <%= f.label :password, "Новий пароль", class: "form-label" %>
+        <%= f.password_field :password, autocomplete: "new-password", class: "form-control-auth" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :password_confirmation, "Підтвердження нового пароля", class: "form-label" %>
+        <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control-auth" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :current_password, "Поточний пароль", class: "form-label" %>
+        <%= f.password_field :current_password, autocomplete: "current-password", class: "form-control-auth" %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "Зберегти зміни", class: "auth-button" %>
+      </div>
+    <% end %>
+
+    <%= link_to 'Назад', root_path, class: "auth-links" %>
+
+  </div>
+</div>
