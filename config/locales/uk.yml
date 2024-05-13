@@ -1,0 +1,29 @@
+uk:
+  registration:
+    email: "Електронна пошта"
+    city: "Місто"
+    password: "Пароль"
+    password confirmation: "Підтвердження пароля"
+    register: "Зареєструватися"
+  links:
+    login: "Вхід"
+    confirmation-instructions: "Не отримали інструкції для підтвердження?"
+    forgot-pass: "Забули пароль?"
+    sign-up: "Зареєструватися"
+  devise:
+    sessions:
+      signed_in: 'Ви успішно увійшли'
+      signed_out: 'Ви успішно вийшли'
+    registrations:
+      signed_up: 'Дякуємо за реєстрацію!'
+  time:
+    formats:
+      long: "%Y-%m-%d %H:%M:%S"
+    date:
+      formats:
+        long: "%Y-%m-%d"
+  Home:
+    sign_out: 'Вийти'
+    change_pass: 'Змінити пароль'
+    go_to_home: 'Головна'
+
