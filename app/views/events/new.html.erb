@@ -1,0 +1,39 @@
+<h1>Новое событие</h1>
+
+<%= form_with model: @event, local: true do |form| %>
+  <% if @event.errors.any? %>
+    <div>
+      <h2>Обнаружены ошибки:</h2>
+      <ul>
+        <% @event.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, "Название" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :description, "Описание" %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div>
+    <%= form.label :start_time, "Время начала" %>
+    <%= form.datetime_select :start_time %>
+  </div>
+
+  <div>
+    <%= form.label :end_time, "Время окончания" %>
+    <%= form.datetime_select :end_time %>
+  </div>
+
+  <div>
+    <%= form.submit "Создать", class: 'btn btn-success' %>
+    <%= link_to 'Back to Events', events_path , class: 'btn btn-secondary mx-1'%>
+  </div>
+<% end %>
